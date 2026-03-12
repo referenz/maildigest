@@ -34,7 +34,7 @@ cp .env.example .env
 | `DAYS_BACK`         | ❌      | Wie viele Tage zurückschauen (Standard: `1`)       |
 | `IMAP_FOLDER`       | ❌      | Gmail-Ordner (Standard: `INBOX`)                   |
 | `MAX_EMAILS`        | ❌      | Max. E-Mails pro Lauf (Standard: `50`)             |
-| `STATE_FILE`        | ❌      | Pfad zur State-Datei (Standard: `~/.email_summary_state.json`) |
+| `STATE_FILE`        | ❌      | Pfad zur State-Datei (Standard: `./email_summary_state.json`) |
 
 ### App-Passwort erstellen
 
@@ -57,6 +57,7 @@ npm run typecheck
 Zwei Unit-Dateien anlegen (Pfad anpassen):
 
 **`~/.config/systemd/user/maildigest.service`**
+
 ```ini
 [Unit]
 Description=maildigest – tägliche E-Mail-Zusammenfassung
@@ -71,6 +72,7 @@ StandardError=journal
 ```
 
 **`~/.config/systemd/user/maildigest.timer`**
+
 ```ini
 [Unit]
 Description=maildigest täglich um 07:00 Uhr

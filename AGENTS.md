@@ -5,6 +5,7 @@ Dieses Dokument beschreibt das Projekt für KI-Assistenten (Claude Code, Copilot
 ## Projektübersicht
 
 **maildigest** ist ein TypeScript-Skript, das automatisiert:
+
 1. E-Mails aus einem Gmail-Postfach per IMAP abruft
 2. Die E-Mails per Anthropic Claude (Haiku) zusammenfasst
 3. Die Zusammenfassung als HTML-E-Mail an eine Zieladresse versendet
@@ -85,7 +86,7 @@ Logs: `journalctl --user -u maildigest.service`
 - **Kein dotenv**: Umgebungsvariablen werden nativ über `--env-file` geladen.
 - **Body-Limit**: E-Mail-Bodies werden auf 3.000 Zeichen gekürzt (Kostenkontrolle).
 - **Modellwahl**: Claude Haiku statt Sonnet – für reine Zusammenfassungsaufgaben ausreichend und deutlich günstiger.
-- **State-Datei**: Speichert Zeitstempel und E-Mail-Anzahl des letzten Laufs unter `~/.email_summary_state.json`. Aktuell informativ; kann für UID-Tracking zur Duplikatvermeidung erweitert werden.
+- **State-Datei**: Speichert Zeitstempel und E-Mail-Anzahl des letzten Laufs unter `./email_summary_state.json`. Aktuell informativ; kann für UID-Tracking zur Duplikatvermeidung erweitert werden.
 
 ## Bekannte Einschränkungen
 

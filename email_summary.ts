@@ -6,7 +6,6 @@
  *
  * Konfiguration: .env-Datei im gleichen Verzeichnis (siehe .env.example)
  * Ausführung:    node --env-file=.env email_summary.ts
- * Cron (tägl.):  0 7 * * * cd /pfad/zum/projekt && node --env-file=.env email_summary.ts
  */
 
 import Anthropic from "@anthropic-ai/sdk";
