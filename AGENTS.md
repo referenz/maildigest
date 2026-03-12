@@ -35,16 +35,16 @@ maildigest/
 
 ## Umgebungsvariablen
 
-| Variable          | Pflicht | Beschreibung                                      |
-|-------------------|---------|---------------------------------------------------|
-| `GMAIL_USER`      | ✅      | Gmail-Adresse (Quelle)                            |
-| `GMAIL_APP_PW`    | ✅      | 16-stelliges Google App-Passwort (ohne Leerzeichen)|
-| `TARGET_EMAIL`    | ✅      | Zieladresse für die Zusammenfassung               |
-| `ANTHROPIC_API_KEY` | ✅   | API-Key von console.anthropic.com                 |
-| `DAYS_BACK`       | ❌      | Wie viele Tage zurückschauen (Standard: `1`)      |
-| `IMAP_FOLDER`     | ❌      | Gmail-Ordner (Standard: `INBOX`)                  |
-| `MAX_EMAILS`      | ❌      | Max. E-Mails pro Lauf (Standard: `50`)            |
-| `STATE_FILE`      | ❌      | Pfad zur State-Datei (Standard: `~/.email_summary_state.json`) |
+| Variable          | Pflicht | Beschreibung                                                  |
+|-------------------|---------|---------------------------------------------------------------|
+| `GMAIL_USER`      | ✅      | Gmail-Adresse (Quelle)                                        |
+| `GMAIL_APP_PW`    | ✅      | 16-stelliges Google App-Passwort (ohne Leerzeichen)           |
+| `TARGET_EMAIL`    | ✅      | Zieladresse für die Zusammenfassung                           |
+| `ANTHROPIC_API_KEY` | ✅   | API-Key von console.anthropic.com                              |
+| `DAYS_BACK`       | ❌      | Wie viele Tage zurückschauen (Standard: `1`)                  |
+| `IMAP_FOLDER`     | ❌      | Gmail-Ordner (Standard: `INBOX`)                              |
+| `MAX_EMAILS`      | ❌      | Max. E-Mails pro Lauf (Standard: `50`)                        |
+| `STATE_FILE`      | ❌      | Pfad zur State-Datei (Standard: `./email_summary_state.json`) |
 
 ## Skript ausführen
 
@@ -87,6 +87,12 @@ Logs: `journalctl --user -u maildigest.service`
 - **Body-Limit**: E-Mail-Bodies werden auf 3.000 Zeichen gekürzt (Kostenkontrolle).
 - **Modellwahl**: Claude Haiku statt Sonnet – für reine Zusammenfassungsaufgaben ausreichend und deutlich günstiger.
 - **State-Datei**: Speichert Zeitstempel und E-Mail-Anzahl des letzten Laufs unter `./email_summary_state.json`. Aktuell informativ; kann für UID-Tracking zur Duplikatvermeidung erweitert werden.
+
+## Sicherheitshinweise für KI-Assistenten
+
+- **Niemals `.env`-Dateien lesen** – sie enthalten echte Credentials.
+- Zur Prüfung des Repository-Inhalts ausschließlich `git show` auf committete Dateien verwenden.
+- Für Konfigurationsfragen nur `.env.example` heranziehen.
 
 ## Bekannte Einschränkungen
 

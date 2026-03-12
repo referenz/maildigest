@@ -25,15 +25,15 @@ npm install
 cp .env.example .env
 ```
 
-| Variable            | Pflicht | Beschreibung                                       |
-|---------------------|---------|----------------------------------------------------|
-| `GMAIL_USER`        | ✅      | Gmail-Adresse (Quelle)                             |
-| `GMAIL_APP_PW`      | ✅      | 16-stelliges App-Passwort (ohne Leerzeichen)       |
-| `TARGET_EMAIL`      | ✅      | Zieladresse für die Zusammenfassung                |
-| `ANTHROPIC_API_KEY` | ✅      | API-Key von console.anthropic.com                  |
-| `DAYS_BACK`         | ❌      | Wie viele Tage zurückschauen (Standard: `1`)       |
-| `IMAP_FOLDER`       | ❌      | Gmail-Ordner (Standard: `INBOX`)                   |
-| `MAX_EMAILS`        | ❌      | Max. E-Mails pro Lauf (Standard: `50`)             |
+| Variable            | Pflicht | Beschreibung                                                  |
+|---------------------|---------|---------------------------------------------------------------|
+| `GMAIL_USER`        | ✅      | Gmail-Adresse (Quelle)                                        |
+| `GMAIL_APP_PW`      | ✅      | 16-stelliges App-Passwort (ohne Leerzeichen)                  |
+| `TARGET_EMAIL`      | ✅      | Zieladresse für die Zusammenfassung                           |
+| `ANTHROPIC_API_KEY` | ✅      | API-Key von console.anthropic.com                             |
+| `DAYS_BACK`         | ❌      | Wie viele Tage zurückschauen (Standard: `1`)                  |
+| `IMAP_FOLDER`       | ❌      | Gmail-Ordner (Standard: `INBOX`)                              |
+| `MAX_EMAILS`        | ❌      | Max. E-Mails pro Lauf (Standard: `50`)                        |
 | `STATE_FILE`        | ❌      | Pfad zur State-Datei (Standard: `./email_summary_state.json`) |
 
 ### App-Passwort erstellen
