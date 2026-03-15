@@ -74,8 +74,8 @@ Logs: `journalctl --user -u maildigest.service`
 | Paket               | Zweck                        |
 |---------------------|------------------------------|
 | `@anthropic-ai/sdk` | Claude API                   |
-| `imap`              | IMAP-Verbindung zu Gmail     |
-| `mailparser`        | Parsen von RFC822-Nachrichten|
+| `imapflow`          | IMAP-Verbindung zu Gmail     |
+| `postal-mime`       | Parsen von RFC822-Nachrichten|
 | `nodemailer`        | SMTP-Versand via Gmail       |
 
 `dotenv`, `ts-node` und `tsx` werden **nicht** benötigt – Node 25 übernimmt diese Aufgaben nativ.
