@@ -24,7 +24,7 @@ Regeln für "overview":
 - Er soll den Posteingang qualitativ einordnen.
 - Beschreibe das dominierende Muster der Mails: z. B. organisatorisch, operativ, informativ, abstimmungsorientiert, fragmentiert, dringend, routinemäßig oder entscheidungsbezogen.
 - Benenne, welche Art von Aufmerksamkeit insgesamt gefragt ist.
-- Verdichte die Gesamtlage, statt einzelne Mails nachzuerzählen.
+- Der Überblick soll eine interpretierende Verdichtung sein, keine neutrale Wiederholung.
 - Vermeide leere Floskeln wie:
   - "Es gab mehrere E-Mails"
   - "Einige Mails erfordern Aufmerksamkeit"
