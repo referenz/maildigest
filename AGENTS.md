@@ -24,12 +24,21 @@ Gedacht als täglicher Cron-Job auf einem Linux-System.
 
 ```
 maildigest/
-├── email_summary.ts   # Hauptskript (einzige Quelldatei)
+├── email_summary.ts        # Einstiegspunkt (main)
+├── src/
+│   ├── config.ts           # Konfiguration & Typen
+│   ├── logger.ts           # Logging
+│   ├── state.ts            # State laden/speichern
+│   ├── textUtils.ts        # Text-Bereinigung (smartTrim, HTML→Text)
+│   ├── fetchEmails.ts      # IMAP-Abruf
+│   ├── summarize.ts        # Claude-Auswertung & System-Prompt
+│   ├── buildHtml.ts        # HTML-E-Mail generieren
+│   └── sendSummary.ts      # E-Mail versenden
 ├── package.json
-├── tsconfig.json      # Nur für Typprüfung (noEmit: true), kein Build-Schritt
-├── .env               # Nicht im Repository – siehe .env.example
-├── .env.example       # Vorlage für Umgebungsvariablen
-├── AGENTS.md          # Diese Datei
+├── tsconfig.json           # Nur für Typprüfung (noEmit: true), kein Build-Schritt
+├── .env                    # Nicht im Repository – siehe .env.example
+├── .env.example            # Vorlage für Umgebungsvariablen
+├── AGENTS.md               # Diese Datei
 └── README.md
 ```
 
